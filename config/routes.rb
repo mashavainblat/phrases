@@ -2,6 +2,13 @@ Rails.application.routes.draw do
 
   resources :phrases
 
+  resource :phrases do
+  	get :json, on: :member
+  end
+  root "phrases#index"
+
+  get "new_phrase" => "phrases#new_phrase"
+
 end
 
 

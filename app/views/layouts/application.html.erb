@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Phrases</title>
+  <title>InspirationalQuotes</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700|Oswald|Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <script   src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
 </head>
-<body>
+<% @phrases.each do |phrase| %>
+	<body style="background-color:<%= phrase.background_color %>;background-repeat: no-repeat; background-size:100%;">
 
-<%= yield %>
+<% end %>
 
-</body>
+
+	<div id="buttonContainer">
+		<button id="getNewQuote">New quote</button>
+	</div>
+
+	<%= yield %>
+
+	</body>
 </html>
