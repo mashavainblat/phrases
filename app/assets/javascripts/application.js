@@ -20,7 +20,8 @@
 
 $(document).ready(function(){
 
-$("body").css({"background-image": "url(http://i.imgur.com/ZUs8GSe.jpg)"})
+$("body").css({"background-image": "url(http://i.imgur.com/dtBl5qW.png)"})
+$("body").css({"background-color": "#b7a5d0"})
 counter = 0;
 
 	$("button").click(function(){
@@ -35,13 +36,18 @@ counter = 0;
 				//loop through phrases.image
 				// for(var i = 0; i<response.length; i++){
 					// console.log("response[i].image: ", response[i].image)
-					console.log("response[counter].image", response[counter].image)
+					// console.log("response[counter].image", response[counter].image)
+					// console.log("response[counter].background_color: ", response[counter].background_color)
 					var imgUrl = response[counter].image
+					var background_color = response[counter].background_color
 					// var imgUrl = image.toString()
 					console.log("imgUrl: ", imgUrl)
+					console.log("background_color: ", background_color)
+
 
 					// console.log("body: ", $("body"))
 					$("body").css({"background-image": "url("+imgUrl+")"})
+					$("body").css({"background-color": background_color})
 					counter ++
 					if(counter>=response.length){
 						counter = 0
