@@ -20,8 +20,8 @@
 
 $(document).ready(function(){
 
-$("body").css({"background-image": "url(http://i.imgur.com/dtBl5qW.png)"})
-$("body").css({"background-color": "#b7a5d0"})
+$("body").css({"background-image": "url(http://i.imgur.com/6L9hPgB.png)"})
+$("body").css({"background-color": "#f9809c"})
 counter = 0;
 
 	$("button").click(function(){
